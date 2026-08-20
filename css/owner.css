@@ -1,0 +1,279 @@
+/* ==========================================================================
+   RoadRescue Customer Portal & Booking Wizard Styles
+   Vehicle cards, diagnostic wizard, live tracking timeline, chat drawer
+   ========================================================================== */
+
+/* Searching Radar Card */
+.broadcast-searching-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(47, 128, 237, 0.35);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 1.5rem;
+}
+
+.radar-spinner-ring {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid rgba(47, 128, 237, 0.15);
+  border-top-color: var(--primary);
+  border-right-color: var(--bright-blue);
+  animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.broadcast-countdown-val {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--bright-blue);
+  letter-spacing: 0.05em;
+}
+
+/* Accepted Mechanic Card */
+.accepted-mechanic-card {
+  background: var(--bg-card);
+  border: 1px solid var(--success);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: 0 0 25px var(--success-glow);
+  margin-bottom: 1.5rem;
+}
+
+.mechanic-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Live In-App Chat Drawer */
+.chat-drawer-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-top: 1.25rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.chat-header {
+  background: var(--bg-surface);
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.chat-messages-stream {
+  height: 240px;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: rgba(7, 17, 31, 0.5);
+}
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 0.65rem 1rem;
+  border-radius: 14px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  position: relative;
+}
+
+.chat-bubble-customer {
+  align-self: flex-end;
+  background: var(--primary);
+  color: #FFFFFF;
+  border-bottom-right-radius: 2px;
+}
+
+.chat-bubble-mechanic {
+  align-self: flex-start;
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+  border-bottom-left-radius: 2px;
+}
+
+.chat-time {
+  font-size: 0.7rem;
+  opacity: 0.75;
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.chat-quick-chips {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  overflow-x: auto;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.chip-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.chip-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.chat-input-bar {
+  display: flex;
+  padding: 0.75rem 1rem;
+  gap: 0.5rem;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.chat-input-control {
+  flex-grow: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: white;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.88rem;
+  outline: none;
+}
+
+/* Service Selector Grid */
+.service-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-card-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-main);
+}
+
+.service-card-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.service-card-btn.selected {
+  background: rgba(47, 128, 237, 0.15);
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.service-icon { font-size: 1.8rem; line-height: 1; }
+.service-title { font-size: 0.85rem; font-weight: 700; }
+
+/* Tracking Status Timeline */
+.tracking-status-bar {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 1.25rem;
+}
+
+.timeline-steps::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 5%;
+  right: 5%;
+  height: 3px;
+  background: rgba(148, 163, 184, 0.15);
+  z-index: 0;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-node {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 2px solid var(--text-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  transition: all 0.3s ease;
+}
+
+.timeline-step.completed .step-node {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
+.timeline-step.active .step-node {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.step-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 0.45rem;
+}
+
+.timeline-step.active .step-label { color: var(--bright-blue); }
+.timeline-step.completed .step-label { color: var(--success); }

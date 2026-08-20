@@ -1,0 +1,28 @@
+# Logs & Environments
+.env
+.env.local
+.env.*.local
+*.log
+npm-debug.log*
+
+# Node Modules & Dependencies
+node_modules/
+server/node_modules/
+
+# Credentials, Keys & Private Files
+*.pem
+*.key
+*.cert
+*.pfx
+
+# Temporary Test Scripts & Scratch Files
+server/test_*.js
+server/trigger_*.js
+scratch/
+.system_generated/
+
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
